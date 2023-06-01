@@ -13,7 +13,7 @@ const Articles = () => {
     { console.log(data) }
     return (
         <Grid container spacing={2}>
-            {data.posts.map(post => <Article {...post} key={post.slug}/>)}
+            {data.posts.map(post => <Article {...post} key={post.slug} />)}
         </Grid>
     );
 };

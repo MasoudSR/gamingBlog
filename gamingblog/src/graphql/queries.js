@@ -15,4 +15,16 @@ const GET_ARTICLES = gql`
 	}
 `;
 
-export { GET_ARTICLES };
+const GET_AUTHORS = gql`
+	query {
+		authors {
+			image {
+				url
+			}
+			name
+			slug
+		}
+	}
+`;
+
+export { GET_ARTICLES, GET_AUTHORS };

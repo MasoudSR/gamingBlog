@@ -7,7 +7,7 @@ import Authors from './Authors';
 const Content = () => {
     return (
         <Container>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} marginTop={2} padding={3}>
                 <Grid item xs={12} sm={4}>
                     <Typography>
                         نویسندگان

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, CardMedia, Card, CardContent, Typography, CardActionArea } from '@mui/material';
+import { Grid, CardMedia, Card, CardContent, Typography, CardActionArea, Divider } from '@mui/material';
 
 const Article = ({ title, slug, image, author }) => {
     return (
@@ -8,8 +8,12 @@ const Article = ({ title, slug, image, author }) => {
                 <CardActionArea>
                     <CardMedia component="img" image={image.url} alt={title} />
                     <CardContent>
-                        <Typography>
+                        <Typography gutterBottom variant='h5' component="div">
                             {title}
+                        </Typography>
+                        <Divider/>
+                        <Typography variant='body2' color="text.secondary" marginTop={1}>
+                            نویسنده: {author.name}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
