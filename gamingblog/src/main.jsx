@@ -2,9 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-import "./theme/index.css"
-
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client"
+
+import { ThemeProvider } from '@mui/material'
+import theme from './theme/mui.js'
+import "./theme/index.css"
 
 const client = new ApolloClient({
   uri: import.meta.env.VITE_REACT_APP_GRAPHQL_URI,
@@ -13,7 +15,9 @@ const client = new ApolloClient({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ApolloProvider client={client}>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </ApolloProvider>
   ,
 )
