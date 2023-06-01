@@ -13,7 +13,7 @@ const Authors = () => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <Card>
+                <Card sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 5px 5px", border: 1, borderColor: 'grey.200' }}>
                     {data.authors.map((author, index) =>
                         <React.Fragment key={author.slug}>
                             <CardActionArea sx={{ padding: "10px", display: "flex" }}>

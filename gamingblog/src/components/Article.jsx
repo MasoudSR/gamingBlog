@@ -4,7 +4,7 @@ import { Grid, CardMedia, Card, CardContent, Typography, CardActionArea, Divider
 const Article = ({ title, slug, image, author }) => {
     return (
         <Grid item xs={12} sm={6} md={4}>
-            <Card>
+            <Card sx={{borderRadius:5 , boxShadow:"rgba(0,0,0,0.1) 0px 5px 7px"}} >
                 <CardActionArea>
                     <CardMedia component="img" image={image.url} alt={title} />
                     <CardContent>

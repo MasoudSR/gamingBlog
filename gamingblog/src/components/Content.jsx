@@ -9,7 +9,7 @@ const Content = () => {
         <Container>
             <Grid container spacing={2} marginTop={1} padding={3}>
                 <Grid item xs={12} sm={4}>
-                    <Typography>
+                    <Typography variant='h5'>
                         نویسندگان
                     </Typography>
                     <Authors />
