@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
+import { BrowserRouter } from "react-router-dom"
+
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client"
 
 import { ThemeProvider } from '@mui/material'
@@ -15,10 +17,12 @@ const client = new ApolloClient({
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ApolloProvider client={client}>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </ApolloProvider>
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </ApolloProvider>
+  </BrowserRouter>
   ,
 )

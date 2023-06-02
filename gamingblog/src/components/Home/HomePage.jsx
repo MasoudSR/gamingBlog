@@ -4,17 +4,17 @@ import Articles from './Articles';
 import { Container, Typography } from '@mui/material';
 import Authors from './Authors';
 
-const Content = () => {
+const HomePage = () => {
     return (
         <Container>
             <Grid container spacing={2} marginTop={1} padding={3}>
-                <Grid item xs={12} sm={4}>
+                <Grid item xs={12} sm={3}>
                     <Typography variant='h5'>
                         نویسندگان
                     </Typography>
                     <Authors />
                 </Grid>
-                <Grid item xs={12} sm={8} marginTop={{ xs: 5, sm: 0 }}>
+                <Grid item xs={12} sm={9} marginTop={{ xs: 5, sm: 0 }}>
                     <Typography variant='h5'>
                         مقالات
                     </Typography>
@@ -25,4 +25,4 @@ const Content = () => {
     );
 };
 
-export default Content;
+export default HomePage;

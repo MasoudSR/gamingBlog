@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { GET_AUTHORS } from '../graphql/queries';
+import { GET_AUTHORS } from '../../graphql/queries';
 import { Grid, Card, CardActionArea, Avatar, CardMedia, Typography, Divider } from '@mui/material';
 
 const Authors = () => {
