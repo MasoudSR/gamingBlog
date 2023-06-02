@@ -1,7 +1,7 @@
-import { useQuery } from '@apollo/client';
-import { Grid, Card, CardActionArea, Avatar, CardMedia, Typography, Divider } from '@mui/material';
 import React from 'react';
+import { useQuery } from '@apollo/client';
 import { GET_AUTHORS } from '../graphql/queries';
+import { Grid, Card, CardActionArea, Avatar, CardMedia, Typography, Divider } from '@mui/material';
 
 const Authors = () => {
     const { loading, data, error } = useQuery(GET_AUTHORS)
@@ -16,7 +16,7 @@ const Authors = () => {
                 <Card sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 5px 5px", border: 1, borderColor: 'grey.200' }}>
                     {data.authors.map((author, index) =>
                         <React.Fragment key={author.slug}>
-                            <CardActionArea sx={{ padding: "10px", display: "flex" }}>
+                            <CardActionArea sx={{ padding: "10px", display: "flex", borderRadius: 0}}>
                                 <Avatar aria-label="recipe">
                                     <CardMedia component="img" image={author.image.url} alt={author.name} />
                                 </Avatar>

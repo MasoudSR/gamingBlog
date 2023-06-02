@@ -9,7 +9,7 @@ const Header = () => {
         <AppBar position="sticky" color="primary">
             <Container>
                 <Toolbar>
-                    <Typography variant="h6">
+                    <Typography variant="h6" fontWeight={600}>
                         وبلاگ گیمینگ
                     </Typography>
                 </Toolbar>

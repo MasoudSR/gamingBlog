@@ -15,7 +15,7 @@ const Content = () => {
                     <Authors />
                 </Grid>
                 <Grid item xs={12} sm={8} marginTop={{ xs: 5, sm: 0 }}>
-                    <Typography>
+                    <Typography variant='h5'>
                         مقالات
                     </Typography>
                     <Articles />
