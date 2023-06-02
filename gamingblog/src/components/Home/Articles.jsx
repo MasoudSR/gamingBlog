@@ -10,7 +10,6 @@ const Articles = () => {
     if (loading) return <h1>loading</h1>
     if (error) return <h1>error</h1>
 
-    { console.log(data) }
     return (
         <Grid container spacing={2}>
             {data.posts.map(post => <ArticleCard {...post} key={post.slug} />)}
