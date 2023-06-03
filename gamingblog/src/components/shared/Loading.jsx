@@ -3,7 +3,7 @@ import { MutatingDots } from "react-loader-spinner"
 
 const Loading = () => {
     return (
-        <div width="100%" style={{display:"flex" , justifyContent:"center"}}>
+        <div style={{width:"100%" , height:"92vh",display:"flex" , justifyContent:"center"}}>
             <MutatingDots
                 height="100"
                 width="100"
