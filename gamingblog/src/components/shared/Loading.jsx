@@ -1,16 +1,15 @@
 import React from 'react';
-import { MutatingDots } from "react-loader-spinner"
+import { TailSpin } from "react-loader-spinner"
 
 const Loading = () => {
     return (
-        <div style={{width:"100%" , height:"92vh",display:"flex" , justifyContent:"center"}}>
-            <MutatingDots
+        <div style={{width:"100%" , height:"92vh",display:"flex" , justifyContent:"center" , marginTop:"50px"}}>
+            <TailSpin
                 height="100"
                 width="100"
-                color="#2a37af"
-                secondaryColor='#2d368a'
-                radius='12.5'
-                ariaLabel="mutating-dots-loading"
+                color="#6a73c2"
+                radius='1'
+                ariaLabel="loading"
                 wrapperStyle={{}}
                 wrapperClass=""
                 visible={true}

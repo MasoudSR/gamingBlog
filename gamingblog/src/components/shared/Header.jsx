@@ -6,7 +6,7 @@ import { Container } from '@mui/material';
 
 const Header = () => {
     return (
-        <AppBar position="sticky" color="primary">
+        <AppBar position="static" color="primary">
             <Container>
                 <Toolbar>
                     <Typography variant="h6" fontWeight={600}>
