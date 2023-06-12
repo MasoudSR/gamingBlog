@@ -18,7 +18,6 @@ const Author = () => {
     if (error) return <h1>error</h1>
 
     const { author: { bio, image, name, posts } } = data
-    console.log(posts);
 
     return (
         <Container>

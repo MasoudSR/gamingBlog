@@ -14,7 +14,6 @@ function App() {
         <Route path="articles/:slug" element={<Article />} />
         <Route path="authors/:slug" element={<Author />} />
       </Routes>
-
       <Footer />
     </>
   )

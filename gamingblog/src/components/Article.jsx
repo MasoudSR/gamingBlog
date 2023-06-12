@@ -47,7 +47,7 @@ const Article = () => {
                     </Link>
                 </Grid>
             </Grid>
-            <CommentsForm />
+            <CommentsForm slug={slug}/>
         </Container>
     );
 };
