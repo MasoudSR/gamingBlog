@@ -5,6 +5,7 @@ import Loading from './shared/Loading';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Container, Grid, Typography, Avatar, Button, Box } from '@mui/material';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
+import CommentsForm from './CommentsForm';
 
 const Article = () => {
 
@@ -46,6 +47,7 @@ const Article = () => {
                     </Link>
                 </Grid>
             </Grid>
+            <CommentsForm />
         </Container>
     );
 };
