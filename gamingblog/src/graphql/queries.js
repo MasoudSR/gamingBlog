@@ -44,6 +44,14 @@ const GET_ARTICLE = gql`
 			content {
 				html
 			}
+			comments {
+				... on Comment {
+					name
+					createdAt
+					description
+					id
+				}
+			}
 		}
 	}
 `;

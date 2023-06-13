@@ -6,6 +6,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Container, Grid, Typography, Avatar, Button, Box } from '@mui/material';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 import CommentsForm from './CommentsForm';
+import Comments from './Comments';
 
 const Article = () => {
 
@@ -16,11 +17,11 @@ const Article = () => {
     if (loading) return <Loading />
     if (error) return <h1>error</h1>
 
-    const { post: { author, content, image, title } } = data
+    const { post: { author, content, image, title, comments } } = data
 
     return (
         <Container>
-            <Grid container padding={3}>
+            <Grid container padding={1}>
                 <Grid item xs={12} display="flex" justifyContent="space-between" alignItems="end">
                     <Typography component="h2" variant='h3' fontWeight={500} xs="12" mt={4}>
                         {title}
@@ -46,8 +47,14 @@ const Article = () => {
                         </Box>
                     </Link>
                 </Grid>
+                <CommentsForm slug={slug} />
+                <Grid container sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 0px 7px" }} padding={3} my={2}>
+                    <Typography variant='h5' color="primary" fontWeight="600">
+                        نظرات:
+                    </Typography>
+                    {comments.map(comment => <Comments {...comment} key={comment.id} />)}
+                </Grid>
             </Grid>
-            <CommentsForm slug={slug}/>
         </Container>
     );
 };

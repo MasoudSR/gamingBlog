@@ -29,7 +29,7 @@ const CommentsForm = ({ slug }) => {
     }
 
     return (
-        <Grid item xs={12} sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 0px 7px" }} padding={3} margin={3}>
+        <Grid item xs={12} sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 0px 7px" }} padding={3} my={3}>
             <Typography color="primary" variant="h6" mb={2}>
                 نظر خود در مورد این مطلب را بنویسید:
             </Typography>
