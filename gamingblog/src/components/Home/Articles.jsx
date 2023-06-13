@@ -9,10 +9,10 @@ const Articles = () => {
     const { loading, data, error } = useQuery(GET_ARTICLES)
 
     if (loading) return <Loading />
-    if (error) return <h1>error</h1>
+    if (error) return <h1>لطفا مجدد تلاش کنید</h1>
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} mt={1}>
             {data.posts.map(post => <ArticleCard {...post} key={post.slug} />)}
         </Grid>
     );

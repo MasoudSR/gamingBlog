@@ -26,7 +26,7 @@ const Article = () => {
                     <Typography component="h2" variant='h3' fontWeight={500} xs="12" mt={4}>
                         {title}
                     </Typography>
-                    <Button variant='text' endIcon={<ArrowBackIosRoundedIcon />} size='large' sx={{ paddingLeft: "0" }} onClick={() => navigate(-1)}>
+                    <Button variant='text' endIcon={<ArrowBackIosRoundedIcon />} size='large' sx={{ padding: "0" }} onClick={() => navigate(-1)}>
                         <Typography variant='h6' fontWeight={600} ml={1}>
                             بازگشت
                         </Typography>
@@ -34,7 +34,7 @@ const Article = () => {
                 </Grid>
                 <Grid item mt={4} xs={12}>
                     <img src={image.url} width="100%" style={{ borderRadius: "20px" }} />
-                    <Typography mt={4} dangerouslySetInnerHTML={{ __html: content.html }} />
+                    <Typography variant='p' textAlign="justify" mt={4} dangerouslySetInnerHTML={{ __html: content.html }} />
                 </Grid>
                 <Grid item xs={12} mt={3} display="flex" alignItems="center" justifyContent="end">
                     <Typography ml={1} color="grey.500">

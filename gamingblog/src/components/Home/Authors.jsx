@@ -9,10 +9,10 @@ const Authors = () => {
     const { loading, data, error } = useQuery(GET_AUTHORS)
 
     if (loading) return <Loading />
-    if (error) return <h1>error</h1>
+    if (error) return <h1>لطفا مجدد تلاش کنید</h1>
 
     return (
-        <Grid container spacing={2}>
+        <Grid container>
             <Grid item xs={12}>
                 <Card sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 5px 5px", border: 1, borderColor: 'grey.200' }}>
                     {data.authors.map((author, index) =>

@@ -21,7 +21,7 @@ const Author = () => {
 
     return (
         <Container>
-            <Grid container padding={3}>
+            <Grid container padding={1}>
                 <Grid item xs={12} display="flex" justifyContent="end" alignItems="center">
                     <Button variant='text' endIcon={<ArrowBackIosRoundedIcon />} size='large' sx={{ paddingLeft: "0" }} onClick={() => navigate(-1)}>
                         <Typography variant='h6' fontWeight={600} ml={1}>
@@ -35,8 +35,8 @@ const Author = () => {
                         {name}
                     </Typography>
                 </Grid>
-                <Grid item mt={6} xs={12}>
-                    <Typography dangerouslySetInnerHTML={{ __html: bio.html }} />
+                <Grid item mt={3} xs={12}>
+                    <Typography variant='p' textAlign="justify" dangerouslySetInnerHTML={{ __html: bio.html }} />
                 </Grid>
                 {posts.length > 0 &&
                     <Grid item xs={12} mt={6}>
