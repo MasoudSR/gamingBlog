@@ -12,7 +12,7 @@ const Articles = () => {
     if (error) return <h1>لطفا مجدد تلاش کنید</h1>
 
     return (
-        <Grid container spacing={2} mt={1}>
+        <Grid container spacing={2} mt={0}>
             {data.posts.map(post => <ArticleCard {...post} key={post.slug} />)}
         </Grid>
     );

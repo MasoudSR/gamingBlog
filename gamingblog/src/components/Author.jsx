@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import Loading from './shared/Loading';
 import { GET_AUTHOR } from '../graphql/queries';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Avatar, Container, Grid, Typography, Button } from '@mui/material';
+import { Avatar, Container, Grid, Typography, Button, Divider, Chip } from '@mui/material';
 import ArticleCard from './Home/ArticleCard';
 import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded';
 
@@ -40,10 +40,10 @@ const Author = () => {
                 </Grid>
                 {posts.length > 0 &&
                     <Grid item xs={12} mt={6}>
-                        <Typography variant='h5'>
-                            مقالات {name}:
-                        </Typography>
-                        <Grid container spacing={2}>
+                        <Divider variant='middle'>
+                            <Chip label={`مقالات ${name}`} sx={{'& .MuiChip-label': {fontSize: 18 , fontWeight:"bold"}}} />
+                        </Divider>
+                        <Grid container spacing={2} mt={0}>
                             {posts.map(post => <ArticleCard {...post} key={post.slug} />)}
                         </Grid>
                     </Grid>
