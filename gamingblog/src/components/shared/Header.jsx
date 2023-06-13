@@ -10,11 +10,11 @@ const Header = () => {
         <AppBar position="static" color="primary">
             <Container>
                 <Toolbar>
-                    <Link to="/" style={{textDecoration:"none" , color:"white" , width:"100%"}}>
-                        <Typography variant="h6" fontWeight={600} textAlign="center">
+                    <Typography variant="h6" fontWeight={600} textAlign="center" width="100%">
+                        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                             وبـلاگ گـیـمیـنـگ
-                        </Typography>
-                    </Link>
+                        </Link>
+                    </Typography>
                 </Toolbar>
             </Container>
         </AppBar>
