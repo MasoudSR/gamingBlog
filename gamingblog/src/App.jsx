@@ -4,10 +4,12 @@ import Header from "./components/shared/Header"
 import HomePage from "./components/Home/HomePage"
 import Article from "./components/Article"
 import Author from "./components/Author"
+import ScrollToTop from "./components/shared/ScrollToTop"
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
