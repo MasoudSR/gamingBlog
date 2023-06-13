@@ -48,12 +48,14 @@ const Article = () => {
                     </Link>
                 </Grid>
                 <CommentsForm slug={slug} />
-                <Grid container sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 0px 7px" }} padding={3} my={2}>
-                    <Typography variant='h5' color="primary" fontWeight="600">
-                        نظرات:
-                    </Typography>
-                    {comments.map(comment => <Comments {...comment} key={comment.id} />)}
-                </Grid>
+                {comments.length > 0 &&
+                    <Grid container sx={{ borderRadius: 5, boxShadow: "rgba(0,0,0,0.1) 0px 0px 7px" }} padding={3} my={2}>
+                        <Typography variant='h5' color="primary" fontWeight="600">
+                            نظرات:
+                        </Typography>
+                        {comments.map(comment => <Comments {...comment} key={comment.id} />)}
+                    </Grid>
+                }
             </Grid>
         </Container>
     );
